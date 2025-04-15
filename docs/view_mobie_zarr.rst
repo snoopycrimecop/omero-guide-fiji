@@ -77,21 +77,3 @@ Step-by-step
  ``https://uk1s3.embassy.ebi.ac.uk/idr/zarr/v0.4/idr0062A/6001240.zarr``
 
 #. Click the `OK` button.
-
-
-**Opening an ome.zarr file using a Groovy script**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-#. Launch Fiji.
-
-#. Go to *File > New > Script...*.
-
-#. A dialog pops up. In the *Language* menu, select *Groovy*.
-
-#. Copy the content of :download:`mobie_ome_zarr.groovy <../scripts/groovy/mobie_ome_zarr.groovy>` and paste it into the text script editor of Fiji.
-
-#. Click *Run*.
-
-#. When the image is displayed in the BigDataViewer, select the dialog and press *P* to display the rendering controls.
-
-#. Modify the settings as you see fit.
