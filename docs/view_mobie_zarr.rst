@@ -4,7 +4,8 @@ View zarr file using MoBIE and BDV
 Description
 -----------
 
-This section shows how to view ome.zarr files in Fiji using `MoBIE <https://github.com/mobie/mobie-viewer-fiji>`__.
+This section shows how to view ome.zarr files in Fiji using `BigDataViewer <https://imagej.net/plugins/bdv/>`__
+and `MoBIE <https://github.com/mobie/mobie-viewer-fiji>`__.
 
 We show:
 
@@ -16,7 +17,8 @@ Setup
 -----
 
 - Install Fiji on a local machine.
-- Go to ``Help>Update...``
+- `BigDataViewer` is already included in Fiji.
+- To install `MoBIE`, go to ``Help>Update...``
 - In the ImageJ updater dialog, click on ``Manage update sites``.
 - The `MoBIE`` should already be listed. Select it and click  ``Close``.
 - Click ``Apply changes`` to install it.
@@ -39,38 +41,39 @@ Resources
 Step-by-step
 ------------
 
-**Opening an ome.zarr file from the User Interface**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Opening an ome.zarr file in BigDataViewer**
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Launch Fiji.
 
-#. Go to *Plugins > BigDataViewer > OME ZARR > Open OME ZARR from S3...*.
+#. Go to *Plugins > BigDataViewer > HDF5/N5/Zarr/OME-NGFF Viewer*
+
+#. A dialog pops up.
+
+#. In the text field, you can click `Browse` to open local data or enter the desired URL e.g.
+
+ ``https://uk1s3.embassy.ebi.ac.uk/idr/zarr/v0.4/idr0062A/6001240.zarr``
+
+#. If you Click the `OK`` button tbis will open the image in `BigDataViewer`. You can also click the `Detect datasets` button to inspect the
+   content of the zarr file, such as individual pyramid arrays and labels. You can select multiple items, for example to open
+   the `(multiscales)` image under `labels` alongside the parent `(multiscales)` image.
+
+#. When the image is displayed in the `BigDataViewer`, select the dialog and press *P* to display the rendering controls.
+
+#. Modify the settings as you see fit.
+
+
+**Opening an ome.zarr file in MoBIE**
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#. Launch Fiji.
+
+#. Go to *Plugins > MoBIE > Open > Open OME-Zarr...*
 
 #. A dialog pops up.
 
 #. In the text field, enter the desired URL e.g.
 
- ``https://uk1s3.embassy.ebi.ac.uk/idr/zarr/v0.1/9836832.zarr``
+ ``https://uk1s3.embassy.ebi.ac.uk/idr/zarr/v0.4/idr0062A/6001240.zarr``
 
-#. Click the *OK* button.
-
-#. When the image is displayed in the BigDataViewer, select the dialog and press *P* to display the rendering controls.
-
-#. Modify the settings as you see fit.
-
-**Opening an ome.zarr file using a Groovy script**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-#. Launch Fiji.
-
-#. Go to *File > New > Script...*.
-
-#. A dialog pops up. In the *Language* menu, select *Groovy*.
-
-#. Copy the content of :download:`mobie_ome_zarr.groovy <../scripts/groovy/mobie_ome_zarr.groovy>` and paste it into the text script editor of Fiji.
-
-#. Click *Run*.
-
-#. When the image is displayed in the BigDataViewer, select the dialog and press *P* to display the rendering controls.
-
-#. Modify the settings as you see fit.
+#. Click the `OK` button.
